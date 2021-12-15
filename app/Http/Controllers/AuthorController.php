@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class AuthorController extends Controller
 {
+    public function create()
+    {
+        return view(view: 'authors.create');
+    }
     public function store()
     {
         Author::create($this->validateRequest());
